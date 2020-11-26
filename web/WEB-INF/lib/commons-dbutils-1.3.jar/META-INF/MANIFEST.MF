@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: 1.6.0_16 (Sun Microsystems Inc.)
+Built-By: dan.fabulich
+Build-Jdk: 1.6.0_16
+Implementation-Title: Commons DbUtils
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache
+Implementation-Version: 1.3
+Specification-Title: Commons DbUtils
+Specification-Vendor: The Apache Software Foundation
+Specification-Version: 1.3
+X-Compile-Source-JDK: 1.5
+X-Compile-Target-JDK: 1.5
+Export-Package: org.apache.commons.dbutils;version="1.3",org.apache.co
+ mmons.dbutils.wrappers;version="1.3",org.apache.commons.dbutils.handl
+ ers;version="1.3"
+Tool: Bnd-0.0.238
+Bundle-Name: Commons DbUtils
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 1.3
+Bnd-LastModified: 1257703526898
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-Description: A package of Java utility classes for easing JDBC 
+ development
+Import-Package: javax.sql,org.apache.commons.dbutils;version="1.3",org
+ .apache.commons.dbutils.handlers;version="1.3",org.apache.commons.dbu
+ tils.wrappers;version="1.3"
+Bundle-SymbolicName: org.apache.commons.dbutils
+Bundle-DocURL: http://commons.apache.org/dbutils/
+
