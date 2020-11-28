@@ -4,30 +4,30 @@ package com.shuker.pojo;
  * @ClassName Employee
  * @Description TODO
  * @Author Shuker
- * @Date 2020/11/24 12:45
+ * @Date 2020/11/28 12:45
  * @Version 1.0
  **/
 public class Employee {
-    private int id;
-    private String lastName;
-    private String gender;
-    private String email;
+    private Integer id ;
+    private String lastName ;
+    private char gender ;
+    private String email ;
 
     public Employee() {
     }
 
-    public Employee(int id, String lastName, String gender, String email) {
+    public Employee(Integer id, String lastName, char gender, String email) {
         this.id = id;
         this.lastName = lastName;
         this.gender = gender;
         this.email = email;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -39,11 +39,11 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    public String getGender() {
+    public char getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(char gender) {
         this.gender = gender;
     }
 
@@ -60,7 +60,7 @@ public class Employee {
         return "Employee{" +
                 "id=" + id +
                 ", lastName='" + lastName + '\'' +
-                ", gender='" + gender + '\'' +
+                ", gender=" + gender +
                 ", email='" + email + '\'' +
                 '}';
     }
