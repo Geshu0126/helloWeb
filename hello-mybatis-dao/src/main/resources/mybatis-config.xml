@@ -9,7 +9,9 @@
     <settings>
         <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
-
+    <typeAliases>
+        <package name="com.shuker.pojo"/>
+    </typeAliases>
     <!--配置pagehelper插件-->
     <!--
      //5.0后使用PageInterceptor ,5.0前使用PageHelper
@@ -31,6 +33,7 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/shuker/dao/EmployeeDao.xml"/>
+       <!-- <mapper resource="com/shuker/dao/EmployeeDao.xml"/>-->
+        <mapper class="com.shuker.dao.EmployeeDao"/>
     </mappers>
 </configuration>

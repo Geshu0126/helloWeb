@@ -4,6 +4,7 @@ package com.shuker;
 import com.github.pagehelper.PageHelper;
 import com.shuker.dao.EmployeeDao;
 import com.shuker.pojo.Employee;
+import com.shuker.pojo.EmployeeVo;
 import com.shuker.utils.MybatisUtils;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -137,4 +138,42 @@ public class TestEmployee {
             System.out.println(emp);
         }
     }
+
+    @Test
+    public void testFindByEmployee() {
+        Employee employee = new Employee();
+        employee.setLastName("jack");
+        EmployeeDao dao = session.getMapper(EmployeeDao.class);
+        Employee byEmployee = dao.findByEmployee(employee);
+        System.out.println(byEmployee);
+
+    }
+    @Test
+    public void testLikeFindByEmployeeLastName() {
+        Employee employee = new Employee();
+        employee.setLastName("%ian%");
+        EmployeeDao dao = session.getMapper(EmployeeDao.class);
+        List<Employee> employees = dao.likeFindByEmployeeLastName(employee);
+        System.out.println(employees);
+        session.close();
+
+    }
+
+    @Test
+    public void testLikeFindByEmployeeVo() {
+        EmployeeVo vo = new EmployeeVo();
+        vo.setLastName("%ian%");
+        List<Integer> ids= new ArrayList<>();
+        ids.add(1);
+        ids.add(2);
+        ids.add(3);
+        ids.add(4);
+        vo.setIds(ids);
+        EmployeeDao dao = session.getMapper(EmployeeDao.class);
+        List<Employee> employees = dao.likeFindByEmployeeVo(vo);
+        System.out.println(employees);
+        session.close();
+
+    }
+
 }

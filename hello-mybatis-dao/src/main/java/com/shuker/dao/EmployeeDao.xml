@@ -3,24 +3,27 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shuker.dao.EmployeeDao">
+    <sql id="employeeSql">
+        select * from employee
+    </sql>
 
     <select id="queryEmployees" resultType="com.shuker.pojo.Employee">
-    select id , last_name lastName,gender,email from employee
+        <include refid="employeeSql"></include>
   </select>
 
     <insert id="insertEmployee">
-        insert into employee(id,last_name,gender,email)values(#{id},#{lastName},#{gender},#{email})
+        insert into employee(id,lastname,gender,email)values(#{id},#{lastName},#{gender},#{email})
     </insert>
 
     <select id="queryEmpById" resultType="com.shuker.pojo.Employee">
-        select id , last_name lastName ,gender ,email from employee where id = #{id}
+        <include refid="employeeSql"></include> where id = #{id}
     </select>
 
     <select id="queryByParam" resultType="com.shuker.pojo.Employee">
-     select id , last_name lastName ,gender ,email from employee where id = #{empId} and last_name= #{empName}
+        <include refid="employeeSql"></include> where id = #{empId} and last_name= #{empName}
     </select>
     <select id="queryEmpByWhere" resultType="com.shuker.pojo.Employee">
-        select id ,last_name lastName ,gender, email from employee
+        <include refid="employeeSql"></include>
         <where>
             <if test="name != null and name != ''">
                 last_Name = #{name}
@@ -32,7 +35,7 @@
     </select>
 
     <select id="queryEmpByForEach" resultType="com.shuker.pojo.Employee">
-        select id ,last_name lastName ,gender, email from employee where id in
+        <include refid="employeeSql"></include> where id in
         /*
         五个参数说明：
             collection：形参的类型
@@ -47,7 +50,7 @@
     </select>
 
     <select id="queryEmpByForEachTwo" resultType="com.shuker.pojo.Employee">
-        select id ,last_name lastName ,gender, email from employee where id in
+        <include refid="employeeSql"></include> where id in
 
         <foreach collection="list" item="emp" open="(" close=")" separator=",">
             #{emp.id}
@@ -56,7 +59,44 @@
     </select>
 
     <select id="queryAll" resultType="com.shuker.pojo.Employee">
-       select id ,last_name lastName ,gender, email from employee order by id
+        <include refid="employeeSql"></include>e order by id
     </select>
 
+    <!--通过employee对象查询-->
+    <select id="findByEmployee" resultType="com.shuker.pojo.Employee">
+        <include refid="employeeSql"></include> where 1=1
+        <if test="lastName != null and lastName !=''">
+            and lastname = #{lastName}
+        </if>
+        <if test="email != null and email != ''">
+            and email = #{email}
+        </if>
+    </select>
+
+    <!--通过employee对象查询-->
+    <select id="likeFindByEmployeeLastName" resultType="com.shuker.pojo.Employee">
+        <include refid="employeeSql"></include> where 1=1
+        <if test="lastName != null and lastName !=''">
+            and lastname like #{lastName}
+        </if>
+        <if test="email != null and email != ''">
+            and email like #{email}
+        </if>
+    </select>
+    <!--通过employeeVo对象查询-->
+    <select id="likeFindByEmployeeVo"  resultType="employee" parameterType="EmployeeVo">
+        <include refid="employeeSql"></include>
+        <where>
+            <if test="lastName != null and lastName != ''">
+                lastname like #{lastName}
+            </if>
+            <if test="ids.size()>0 and ids != null">
+                and <foreach collection="ids" open="id in(" close=")" item="id" separator=",">
+                #{id}
+            </foreach>
+            </if>
+
+        </where>
+
+    </select>
 </mapper>
