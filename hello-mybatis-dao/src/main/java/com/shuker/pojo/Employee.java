@@ -8,10 +8,10 @@ package com.shuker.pojo;
  * @Version 1.0
  **/
 public class Employee {
-    private Integer id ;
-    private String lastName ;
-    private char gender ;
-    private String email ;
+    private Integer id;
+    private String lastName;
+    private char gender;
+    private String email;
 
     public Employee() {
     }

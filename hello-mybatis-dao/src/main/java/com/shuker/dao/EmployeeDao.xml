@@ -3,10 +3,60 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shuker.dao.EmployeeDao">
+
     <select id="queryEmployees" resultType="com.shuker.pojo.Employee">
     select id , last_name lastName,gender,email from employee
   </select>
+
     <insert id="insertEmployee">
         insert into employee(id,last_name,gender,email)values(#{id},#{lastName},#{gender},#{email})
     </insert>
+
+    <select id="queryEmpById" resultType="com.shuker.pojo.Employee">
+        select id , last_name lastName ,gender ,email from employee where id = #{id}
+    </select>
+
+    <select id="queryByParam" resultType="com.shuker.pojo.Employee">
+     select id , last_name lastName ,gender ,email from employee where id = #{empId} and last_name= #{empName}
+    </select>
+    <select id="queryEmpByWhere" resultType="com.shuker.pojo.Employee">
+        select id ,last_name lastName ,gender, email from employee
+        <where>
+            <if test="name != null and name != ''">
+                last_Name = #{name}
+            </if>
+            <if test=" id > 5">
+                or id = #{id}
+            </if>
+        </where>
+    </select>
+
+    <select id="queryEmpByForEach" resultType="com.shuker.pojo.Employee">
+        select id ,last_name lastName ,gender, email from employee where id in
+        /*
+        五个参数说明：
+            collection：形参的类型
+            item: 自定义名字 表示数组或集合中的成员的变量
+            open: 开始时的字符
+            close:结束时的字符
+            separator:分隔符
+        */
+        <foreach collection="list" item="empId" open="(" close=")" separator=",">
+            #{empId}
+        </foreach>
+    </select>
+
+    <select id="queryEmpByForEachTwo" resultType="com.shuker.pojo.Employee">
+        select id ,last_name lastName ,gender, email from employee where id in
+
+        <foreach collection="list" item="emp" open="(" close=")" separator=",">
+            #{emp.id}
+        </foreach>
+
+    </select>
+
+    <select id="queryAll" resultType="com.shuker.pojo.Employee">
+       select id ,last_name lastName ,gender, email from employee order by id
+    </select>
+
 </mapper>
