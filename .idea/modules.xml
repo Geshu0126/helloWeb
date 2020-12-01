@@ -6,10 +6,13 @@
       <module fileurl="file://$PROJECT_DIR$/bookStore/bookStore.iml" filepath="$PROJECT_DIR$/bookStore/bookStore.iml" />
       <module fileurl="file://$PROJECT_DIR$/dynamic-proxy/dynamic-proxy.iml" filepath="$PROJECT_DIR$/dynamic-proxy/dynamic-proxy.iml" />
       <module fileurl="file://$PROJECT_DIR$/fileuploadanddownload/fileuploadanddownload.iml" filepath="$PROJECT_DIR$/fileuploadanddownload/fileuploadanddownload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-mybatis/hello-mybatis.iml" filepath="$PROJECT_DIR$/hello-mybatis/hello-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-mybatis-dao/hello-mybatis-dao.iml" filepath="$PROJECT_DIR$/hello-mybatis-dao/hello-mybatis-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-mybatis-manyToMany/hello-mybatis-manyToMany.iml" filepath="$PROJECT_DIR$/hello-mybatis-manyToMany/hello-mybatis-manyToMany.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-mybatis-query/hello-mybatis-query.iml" filepath="$PROJECT_DIR$/hello-mybatis-query/hello-mybatis-query.iml" />
       <module fileurl="file://$PROJECT_DIR$/helloJavaWeb.iml" filepath="$PROJECT_DIR$/helloJavaWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello_maven/hello_maven.iml" filepath="$PROJECT_DIR$/hello_maven/hello_maven.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello_maven_web/hello_maven_web.iml" filepath="$PROJECT_DIR$/hello_maven_web/hello_maven_web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/learn_Mybatis/learn_Mybatis.iml" filepath="$PROJECT_DIR$/learn_Mybatis/learn_Mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/servlet2/servlet2.iml" filepath="$PROJECT_DIR$/servlet2/servlet2.iml" />
     </modules>
   </component>

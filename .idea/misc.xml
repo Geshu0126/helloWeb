@@ -8,6 +8,11 @@
       <list>
         <option value="$PROJECT_DIR$/hello_maven/pom.xml" />
         <option value="$PROJECT_DIR$/hello_maven_web/pom.xml" />
+        <option value="$PROJECT_DIR$/hello-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/hello-mybatis-dao/pom.xml.bak" />
+        <option value="$PROJECT_DIR$/hello-mybatis-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/hello-mybatis-query/pom.xml" />
+        <option value="$PROJECT_DIR$/hello-mybatis-manyToMany/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,4 @@
+com\shuker\domain\user.class
+com\shuker\dao\IRoleDao.class
+com\shuker\utils\MybatisUtils.class
+com\shuker\domain\Role.class

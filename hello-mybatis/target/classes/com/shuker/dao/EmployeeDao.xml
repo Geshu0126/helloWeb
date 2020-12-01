@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shuker.dao.EmployeeDao">
+    <select id="queryEmployees" resultType="com.shuker.pojo.Employee">
+    select id , last_name lastName,gender,email from employee
+  </select>
+    <insert id="insertEmployee">
+        insert into employee(id,last_name,gender,email)values(#{id},#{lastName},#{gender},#{email})
+    </insert>
+</mapper>
