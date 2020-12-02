@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/bookStore/bookStore.iml" filepath="$PROJECT_DIR$/bookStore/bookStore.iml" />
       <module fileurl="file://$PROJECT_DIR$/dynamic-proxy/dynamic-proxy.iml" filepath="$PROJECT_DIR$/dynamic-proxy/dynamic-proxy.iml" />
       <module fileurl="file://$PROJECT_DIR$/fileuploadanddownload/fileuploadanddownload.iml" filepath="$PROJECT_DIR$/fileuploadanddownload/fileuploadanddownload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-mybaits-annotation/hello-mybaits-annotation.iml" filepath="$PROJECT_DIR$/hello-mybaits-annotation/hello-mybaits-annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-mybatis/hello-mybatis.iml" filepath="$PROJECT_DIR$/hello-mybatis/hello-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-mybatis-dao/hello-mybatis-dao.iml" filepath="$PROJECT_DIR$/hello-mybatis-dao/hello-mybatis-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-mybatis-manyToMany/hello-mybatis-manyToMany.iml" filepath="$PROJECT_DIR$/hello-mybatis-manyToMany/hello-mybatis-manyToMany.iml" />

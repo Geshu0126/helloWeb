@@ -8,13 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hello-mybatis-dao" />
         <module name="hello_maven" />
+        <module name="hello-mybatis" />
+        <module name="hello-mybaits-annotation" />
         <module name="hello_maven_web" />
         <module name="hello-mybatis-manyToMany" />
-        <module name="hello-mybatis" />
         <module name="hello-mybatis-query" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hello-mybaits-annotation" target="1.8" />
       <module name="hello-mybatis" target="1.8" />
       <module name="hello-mybatis (1)" target="1.8" />
       <module name="hello-mybatis-dao" target="1.8" />

@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/hello-mybatis-dao/pom.xml" />
         <option value="$PROJECT_DIR$/hello-mybatis-query/pom.xml" />
         <option value="$PROJECT_DIR$/hello-mybatis-manyToMany/pom.xml" />
+        <option value="$PROJECT_DIR$/hello-mybaits-annotation/pom.xml" />
       </list>
     </option>
   </component>
