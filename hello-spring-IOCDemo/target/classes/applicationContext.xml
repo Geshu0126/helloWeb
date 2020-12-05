@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--配置service-->
+    <bean id="accountService" class="com.shuker.service.impl.AccountServiceImpl">
+        <!--注入dao 通过set方法注入-->
+        <property name="accountDao" ref="accountDao"></property>
+    </bean>
+
+    <!--配置dao-->
+    <bean id="accountDao" class="com.shuker.dao.impl.AccountDaoImpl">
+        <!--注入queryRunner 通过set方法注入-->
+        <property name="queryRunner" ref="queryRunner"></property>
+    </bean>
+    <!--配置queryRunner 通过构造方法注入-->
+    <bean id="queryRunner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
+        <!--注入数据源-->
+        <constructor-arg name="ds" ref="dataSource"></constructor-arg>
+    </bean>
+    <!--配置数据源-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!--注入连接数据库的必备信息-->
+        <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/mybatis"></property>
+        <property name="user" value="root"></property>
+        <property name="password" value="333"></property>
+    </bean>
+
+</beans>
