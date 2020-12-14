@@ -1,49 +1,34 @@
 package com.shuker.domain;
 
+import java.io.Serializable;
+
 /**
  * @ClassName Account
  * @Description TODO
  * @Author Shuker
- * @Date 2020/12/9 22:32
+ * @Date 2020/12/14 19:40
  * @Version 1.0
  **/
-public class Account {
-    private Integer id ;
-    private String userName ;
+public class Account implements Serializable {
+    private Integer accountId;
     private double money ;
     private User user ;
+
     public Account() {
     }
 
-    public Account(Integer id, String userName, double money, User user) {
-        this.id = id;
-        this.userName = userName;
+    public Account(Integer accountId, double money, User user) {
+        this.accountId = accountId;
         this.money = money;
         this.user = user;
     }
 
-    public User getUser() {
-        return user;
+    public Integer getAccountId() {
+        return accountId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setAccountId(Integer accountId) {
+        this.accountId = accountId;
     }
 
     public double getMoney() {
@@ -54,11 +39,18 @@ public class Account {
         this.money = money;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @Override
     public String toString() {
         return "Account{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
+                "accountId=" + accountId +
                 ", money=" + money +
                 ", user=" + user +
                 '}';

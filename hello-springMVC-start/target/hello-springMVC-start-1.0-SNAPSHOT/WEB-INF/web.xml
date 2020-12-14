@@ -3,7 +3,8 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <!--spring核心控制器-->
+  <display-name>Archetype Created Web Application</display-name>
+  <!--springMVC核心控制器-->
   <servlet>
     <servlet-name>dispatcherServlet</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -11,24 +12,31 @@
       <param-name>contextConfigLocation</param-name>
       <param-value>classpath:springmvc.xml</param-value>
     </init-param>
-    <!--配置servlet启动加载对象 当服务器启动的时候，就会加载springmvc.xml-->
+    <!--服務器启动时加载springmvc.xml这个时候也就创建了springr容器-->
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>dispatcherServlet</servlet-name>
+    <!--设置拦截请求-->
+    <!--
+      /* 拦截所有请求  包含（.js .css .png .jpg .jsp）
+      *.action *.do 拦截以.actio或.do结尾的请求 不拦截（.js .css .png .jpg .jsp）
+      /  拦截所有请求   不包含.jsp
+    -->
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-  
+  <!--解决中文乱码问题-->
   <filter>
-    <filter-name>characterEncodingFilter</filter-name>
+    <filter-name>encodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
     <init-param>
+      <!--指定字符集-->
       <param-name>encoding</param-name>
       <param-value>UTF-8</param-value>
     </init-param>
   </filter>
   <filter-mapping>
-    <filter-name>characterEncodingFilter</filter-name>
+    <filter-name>encodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 </web-app>
