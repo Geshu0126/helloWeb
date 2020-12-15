@@ -70,10 +70,88 @@
 <h3>springMVC---Request</h3>
 <br>
 <form action="${pageContext.request.contextPath}/user/supportRequest" method="post">
-    姓名：<input type="text" name="username" >
-    密码：<input type="text" name="password" >
-    姓名：<input type="text" name="age" >
+    姓名：<input type="text" name="username" ><br>
+    密码：<input type="text" name="password" ><br>
+    年纪：<input type="text" name="age" ><br>
     <input type="submit" value="提交"><br>
 </form>
+
+<h3>springMVC---requestParamTest</h3>
+<br>
+<form action="${pageContext.request.contextPath}/user/requestParamTest" method="post">
+    姓名：<input type="text" name="username" ><br>
+    密码：<input type="text" name="password" ><br>
+    年纪：<input type="text" name="age" ><br>
+    <input type="submit" value="提交"><br>
+</form>
+
+<h3>springMVC---requestBodyTest</h3>
+<br>
+<form action="${pageContext.request.contextPath}/user/requestBodyTest" method="post">
+    姓名：<input type="text" name="username" ><br>
+    密码：<input type="text" name="password" ><br>
+    年纪：<input type="text" name="age" ><br>
+    <input type="submit" value="提交"><br>
+</form>
+
+<h3>springMVC---pathVariableTest</h3>
+<br>
+<form action="${pageContext.request.contextPath}/user/pathVariableTest/10" method="post">
+    姓名：<input type="text" name="username" ><br>
+    密码：<input type="text" name="password" ><br>
+    年纪：<input type="text" name="age" ><br>
+    <input type="submit" value="提交"><br>
+</form>
+
+<h3>springMVC---ModelAttributeTest1---have result type</h3>
+<br>
+<form action="${pageContext.request.contextPath}/user/updateUser" method="post">
+    姓名：<input type="text" name="username" ><br>
+
+    <input type="submit" value="提交"><br>
+</form>
+
+<h3>springMVC---ModelAttributeTest--- no result type </h3>
+<br>
+<form action="${pageContext.request.contextPath}/user/updateUser1" method="post">
+    姓名：<input type="text" name="username" ><br>
+
+    <input type="submit" value="提交"><br>
+</form>
+
+<h3>springMVC---SessionAttributes </h3>
+<br>
+<a href="${pageContext.request.contextPath}/account/save">往session域中存值</a>
+<a href="${pageContext.request.contextPath}/account/find">往session域中取值</a>
+<a href="${pageContext.request.contextPath}/account/delete">删除session域中的值</a>
+<h3>springMVC---响应数据和结果视图Test1</h3>
+<br>
+<a href="${pageContext.request.contextPath}/user/initUser">update</a>
+
+
+<h3>springMVC---响应数据和结果视图Test1(请求转发)</h3>
+<br>
+<a href="${pageContext.request.contextPath}/user/initAddRequest">请求转发</a>
+
+<h3>springMVC---响应数据和结果视图Test1(请求重定向)</h3>
+<br>
+<a href="${pageContext.request.contextPath}/user/initAddResponse">请求重定向</a>
+
+<h3>springMVC---响应数据和结果视图Test1(请求重定向--直接响应数据)</h3>
+<br>
+<a href="${pageContext.request.contextPath}/user/initAddResponseWrite">请求重定向--直接响应数据</a>
+</body>
+
+<h3>springMVC---ModelAndView</h3>
+<br>
+<a href="${pageContext.request.contextPath}/user/modelAndView">modelAndView</a>
+</body>
+
+
+
+<h3>springMVC---SpringMVC框架提供的转发和重定向</h3>
+<br>
+<a href="${pageContext.request.contextPath}/user/delete">SpringMVC框架提供的转发</a>
+<a href="${pageContext.request.contextPath}/user/count">SpringMVC框架提供的重定向</a>
 </body>
 </html>
